@@ -23,6 +23,6 @@ window.addEventListener('click', oui)
 
 function oui(event){
     let posiX = event.pageX || event.changedTouches[0].pageX;
-    console.log(posiX)
+    document.querySelector('.gros').innerHTML = posiX
 }
 
