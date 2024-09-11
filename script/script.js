@@ -24,5 +24,30 @@ window.addEventListener('click', oui)
 function oui(event){
     let posiX = event.pageX || event.changedTouches[0].pageX;
     document.querySelector('.gros').innerHTML = posiX
+    this.remove
 }
 
+
+
+document.querySelectorAll("a").forEach(function test(tester){
+    tester.addEventListener('click', essai)
+    function essai(){
+        console.log(this.innerText)
+    }
+})
+
+document.querySelectorAll(".barres>div>div").forEach(function test(abracadabra){
+    abracadabra.addEventListener('click', essai)
+    function essai(){
+        let nbMyst=parseInt((Math.random()*100)+1);
+        this.style.height=nbMyst+"%";
+    }
+})
+
+document.querySelectorAll('*').forEach(function(suppr){
+    suppr.addEventListener('click', aller)
+    function aller(event){
+        event.stopPropagation()
+        this.remove();
+    }
+})
